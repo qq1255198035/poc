@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import router from './router'
+import ElementPlus from 'element-plus'
+import '@/assets/css/reset.scss'
+import '@/assets/css/common.scss'
+createApp(App).use(router).use(ElementPlus).mount('#app')
