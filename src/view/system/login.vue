@@ -46,7 +46,7 @@
             </el-input>
           </div>
           <div class="action-box">
-            <el-button type="primary" size="large" style="width: 100%;">登录</el-button>
+            <el-button type="primary" size="large" style="width: 100%;" @click="$router.push({path: '/setting'})">登录</el-button>
             <p class="retrieve-pwd">找回密码</p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const countDown = () => {
 }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .login{
   width: 100%;
   height: 100%;
