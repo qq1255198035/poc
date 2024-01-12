@@ -1,8 +1,6 @@
 <template>
   <div class="setting">
-    <div class="title">
-      账号管理 <img src="@/assets/imgs/common/help.png">
-    </div>
+    <common-title title="账号管理" />
     <div class="content">
       <el-form :model="form" label-width="120px">
         <el-row>
@@ -103,6 +101,7 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import { ArrowDown, Plus } from '@element-plus/icons-vue'
+import CommonTitle from '@/components/CommonTitle'
 const currentPage4 = ref(1)
 const pageSize4 = ref(10)
 const form = reactive({
@@ -177,18 +176,9 @@ const handleCurrentChange = (val) => {
     height: 100%;
     display: flex;
     flex-direction: column;
-    .title{
-      font-size: 20px;
-      color: $regular-color;
-      img{
-        width: 14px;
-        height: 14px;
-        margin-left: 5px;
-      }
-    }
     .content{
       margin-top: 28px;
-      padding: 24px;
+      padding: $basic-margin;
       background-color: #fff;
       flex: 1;
       border-radius: 8px;
